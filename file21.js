@@ -46,17 +46,17 @@ function addToCart(id){
 }
 function increment(id){
     const item = cart.find(p => p.id === id);
-    if(item){
+    // if(item){
         item.quantity++;
         item.total = item.quantity * item.price;
-    }
+    // }
 }
 function decrement(id){
     const item = cart.find(p => p.id === id);
-    if(item && item.quantity > 1){
+    // if(item && item.quantity > 1){
         item.quantity--;
         item.total = item.quantity * item.price;
-    }
+    // }
 }
 const userEmail = "rohit@gmail.com"; 
 function calculateTotal(){
@@ -80,7 +80,7 @@ function placeOrder(){
         items: cart,
         orderValue: total
     };
-    console.log("✅ Order placed successfully");
+    console.log("Order placed successfully");
     console.log(order);
     console.log("Total order value:", total);
 
